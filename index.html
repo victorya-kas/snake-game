@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Snake Game</title>
+        <style>
+            body {
+                background-color: antiquewhite;
+            }
+            #game {
+                display: none;
+            }
+            #snake {
+                margin: 0 auto;
+                display: block;
+            }
+            .score {
+                text-align: center;
+            }
+            #start-game {
+                width: 608px;
+                height: 608px;
+                margin: 0 auto;
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+                height: 300px;
+                width: auto;
+            }
+            .title {
+                text-align: center;
+                font-weight: bold;
+                font-size: 50px;
+                margin-top: 0;
+            }
+            
+            .btn {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                border: none;
+                width: 200px;
+                height: 50px;
+                font-size: 35px;
+                color: #fff;
+                background-color: lightgreen;
+                border: 1px solid #000;
+                cursor: pointer;
+            }
+            #game-over {
+                display: none;
+            }
+            .score-list-item {
+                list-style: none;
+                font-size: 32px;
+                font-style: italic;
+            }
+            .score-list-item:nth-child(2n) {
+                color: green;
+            }
+            #clear-list {
+                display:none;
+            }
+        </style>
+    </head>
+    <div id="start-game">
+        <img src="https://image.flaticon.com/icons/png/512/119/119455.png" alt="">
+        <h1 class="title">SNAKE CLASSIC GAME</h1>
+         <button id="start-btn" class="btn">START</button>
+         <h1>Score List:</h1>
+         <ul id="score-list">
+
+         </ul>
+         <button id="clear-list" class="btn">Clear List</button>
+    </div>
+    <div id="game">
+        <canvas id="snake" width="608" height="608"></canvas>
+        <h1 class="score">Your Score: <span id="count"></span></h1>
+    </div>
+    <div id="game-over">
+        <img src="http://www.iconarchive.com/download/i24292/martin-berube/animal/snake.ico" alt="">
+        <h1 class="title">GAME OVER</h1>
+         <button id="end-btn" class="btn">OK</button>
+    </div>
+
+    <script src="main.js"></script>
+</html>
